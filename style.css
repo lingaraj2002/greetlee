@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -21,7 +25,7 @@ span {
 }
 
 #hero-page {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   padding: 1rem;
@@ -30,6 +34,8 @@ span {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .hero-title {
@@ -87,4 +93,15 @@ span {
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#home-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff0f6;
+  position: relative;
+  top: -100%;
+  left: 0;
+  z-index: 2;
+  display: none;
 }
