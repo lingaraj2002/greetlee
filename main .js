@@ -1,4 +1,5 @@
 const targetDate = new Date("2025-12-17T00:00:00").getTime();
+// const targetDate = new Date("2025-12-02T00:16:00").getTime();
 
 const timer = setInterval(() => {
   const now = new Date().getTime();
@@ -6,6 +7,7 @@ const timer = setInterval(() => {
 
   if (diff <= 0) {
     clearInterval(timer);
+    showHomePage();
     return;
   }
 
@@ -19,3 +21,11 @@ const timer = setInterval(() => {
   document.getElementById("mins").innerText = String(minutes).padStart(2, "0");
   document.getElementById("sec").innerText = String(seconds).padStart(2, "0");
 }, 1000);
+
+const heroPage = document.getElementById("hero-page");
+const homePage = document.getElementById("home-page");
+
+const showHomePage = () => {
+  heroPage.style.display = "none";
+  homePage.style.display = "flex";
+};
