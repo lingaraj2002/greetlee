@@ -3,8 +3,8 @@ const wishPage = document.getElementById("wish-page");
 const counterCard = document.getElementById("counter-card");
 const viewGreetingBtn = document.getElementById("view-greeting-btn");
 
-// const targetDate = new Date("2025-12-17T00:00:00").getTime();
-const targetDate = new Date("2025-12-16T00:25:00").getTime();
+const targetDate = new Date("2025-12-17T00:00:00").getTime();
+// const targetDate = new Date("2025-12-16T00:25:00").getTime();
 
 const timer = setInterval(() => {
   const now = new Date().getTime();
