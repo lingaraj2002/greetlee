@@ -2,6 +2,13 @@ const heroPage = document.getElementById("hero-page");
 const wishPage = document.getElementById("wish-page");
 const counterCard = document.getElementById("counter-card");
 const viewGreetingBtn = document.getElementById("view-greeting-btn");
+const music = document.getElementById("bgMusic");
+
+viewGreetingBtn.addEventListener("click", () => {
+  music.play().catch(console.error);
+  music.volume = 0.1;
+  showWishPage();
+});
 
 const targetDate = new Date("2025-12-17T00:00:00").getTime();
 // const targetDate = new Date("2025-12-16T00:25:00").getTime();
