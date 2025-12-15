@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Yesteryear&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Satisfy&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -19,28 +19,72 @@
         alt="butterflies"
         class="butterflies-img"
       />
-      <h3 class="hero-title">Comming soon...</h3>
-      <div class="countdown-cntnr">
-        <div class="countdown-box">
-          <span id="days">00</span>
-          <p>Days</p>
-        </div>
-        <div class="countdown-box">
-          <span id="hours">00</span>
-          <p>Hours</p>
-        </div>
-        <div class="countdown-box">
-          <span id="mins">00</span>
-          <p>Mins</p>
-        </div>
-        <div class="countdown-box">
-          <span id="sec">00</span>
-          <p>Sec</p>
+      <div id="counter-card">
+        <h3 class="hero-title">Comming soon...</h3>
+        <div class="countdown-cntnr">
+          <div class="countdown-box">
+            <span id="days">00</span>
+            <p>Days</p>
+          </div>
+          <div class="countdown-box">
+            <span id="hours">00</span>
+            <p>Hours</p>
+          </div>
+          <div class="countdown-box">
+            <span id="mins">00</span>
+            <p>Mins</p>
+          </div>
+          <div class="countdown-box">
+            <span id="sec">00</span>
+            <p>Sec</p>
+          </div>
         </div>
       </div>
-      <img src="./assets/hero-flower.png" alt="flower" class="flower-img" />
+      <button
+        id="view-greeting-btn"
+        class="view-greeting-btn"
+        onclick="showWishPage()"
+      >
+        View Greeting
+      </button>
+      <img src="./assets/hero-flower.png" alt="flower" class="flower-img one" />
+      <img src="./assets/hero-flower.png" alt="flower" class="flower-img two" />
+      <img
+        src="./assets/hero-flower.png"
+        alt="flower"
+        class="flower-img three"
+      /><img
+        src="./assets/hero-flower.png"
+        alt="flower"
+        class="flower-img four"
+      />
+      <img
+        src="./assets/hero-flower.png"
+        alt="flower"
+        class="flower-img five"
+      />
     </section>
-    <section id="home-page"></section>
+    <section id="wish-page">
+      <div class="wish-card">
+        <h1 class="wish-title">Happy 5th Anniversary Dear! 💙</h1>
+        <p class="wish-message" id="typewriter"></p>
+        <p class="wish-from">- With love, LeeMa ❤️</p>
+      </div>
+      <div class="sky">
+        <img src="./assets/ballon-blue.png" class="float balloon b1" />
+        <img src="./assets/balloon-red.png" class="float balloon b2" />
+        <img src="./assets/ballon-blue.png" class="float balloon b3" />
+        <img src="./assets/balloon-red.png" class="float balloon b4" />
+        <img src="./assets/heart-blue.png" class="float heart h1" />
+        <img src="./assets/heart-red.png" class="float heart h2" />
+        <img src="./assets/heart-blue.png" class="float heart h3" />
+        <img src="./assets/heart-red.png" class="float heart h4" />
+        <img src="./assets/heart-blue.png" class="float heart h5" />
+        <img src="./assets/heart-red.png" class="float heart h6" />
+        <img src="./assets/heart-blue.png" class="float heart h7" />
+        <img src="./assets/heart-red.png" class="float heart h8" />
+      </div>
+    </section>
     <script src="./main .js"></script>
   </body>
 </html>
