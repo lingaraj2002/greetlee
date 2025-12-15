@@ -13,6 +13,28 @@ viewGreetingBtn.addEventListener("click", () => {
 const targetDate = new Date("2025-12-17T00:00:00").getTime();
 // const targetDate = new Date("2025-12-16T00:25:00").getTime();
 
+const tickSound = new Audio("./assets/clock-ticking.mp3");
+tickSound.preload = "auto";
+
+let soundUnlocked = false;
+
+/* Unlock sound on first user interaction */
+function unlockSound() {
+  tickSound
+    .play()
+    .then(() => {
+      tickSound.pause();
+      tickSound.currentTime = 0;
+      soundUnlocked = true;
+    })
+    .catch(() => {});
+}
+
+document.addEventListener("click", unlockSound, { once: true });
+document.addEventListener("keydown", unlockSound, { once: true });
+document.addEventListener("touchstart", unlockSound, { once: true });
+
+/* Countdown timer */
 const timer = setInterval(() => {
   const now = new Date().getTime();
   const diff = targetDate - now;
@@ -33,6 +55,12 @@ const timer = setInterval(() => {
   document.getElementById("hours").innerText = String(hours).padStart(2, "0");
   document.getElementById("mins").innerText = String(minutes).padStart(2, "0");
   document.getElementById("sec").innerText = String(seconds).padStart(2, "0");
+
+  /* Tick sound every second (after unlock) */
+  if (soundUnlocked) {
+    tickSound.currentTime = 0;
+    tickSound.play().catch(() => {});
+  }
 }, 1000);
 
 const showWishPage = () => {
